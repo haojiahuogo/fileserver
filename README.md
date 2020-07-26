@@ -19,7 +19,7 @@ name=simg|bimg  返回的(缩略图/大图)名称
 # nodejs使用示例
 文件服务器
 //1.html页面部分使用
-
+``` jQuery
 jQuery('#imgUpload').click().fileupload({
     dataType: 'json',
     formData:{"zipImage":'[{"mode":"Fit","w":100,"h":100}]'}, //图片上传参数设置
@@ -32,6 +32,8 @@ jQuery('#imgUpload').click().fileupload({
         }
     }
 });
+``` 
+
 
 //2.js处理部分
 async uploadtonetAction() {
