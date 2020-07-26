@@ -1,0 +1,51 @@
+swagger: "2.0"
+info:
+  title: beego Test API
+  description: beego has a very cool tools to autogenerate documents for your API
+  version: 1.0.0
+  termsOfService: http://beego.me/
+  contact:
+    email: astaxie@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+basePath: /v1
+paths:
+  /file/:
+    post:
+      tags:
+      - file
+      summary: 保存文件
+      description: 保存文件
+      operationId: FileController.保存文件
+      parameters:
+      - in: formData
+        name: file
+        description: 视频文件
+        required: true
+        type: file
+  /image/:
+    post:
+      tags:
+      - image
+      summary: 保存图片
+      description: 保存图片同时可生成缩略图和大图 [{"mode":"Fill","w":160,"h":160,"name":"simg"},{"mode":"Fit","w":800,"h":10000,"name":"bimg"}]
+      operationId: ImageController.保存图片
+      parameters:
+      - in: formData
+        name: file
+        description: 文件
+        required: true
+        type: file
+      - in: formData
+        name: zipstr
+        description: str
+        required: true
+        type: string
+tags:
+- name: image
+  description: |
+    图片相关接口
+- name: file
+  description: |
+    文件相关接口
