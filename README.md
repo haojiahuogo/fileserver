@@ -15,6 +15,7 @@ mode字段为Fill时, 可用新参数fillType=Center|TopLeft|Top|TopRight|Left|R
 
 name=simg|bimg  返回的(缩略图/大图)名称
 
+![](http://www.baidu.com/img/bdlogo.gif)  
 
 # nodejs使用示例
 文件服务器
