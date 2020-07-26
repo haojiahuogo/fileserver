@@ -23,7 +23,7 @@ const (
 // @Description 保存图片同时可生成缩略图和大图 [{"mode":"Fill","w":160,"h":160,"name":"simg"},{"mode":"Fit","w":800,"h":10000,"name":"bimg"}]
 // @Summary 保存图片
 // @Param	file		formData 	file	true		"文件"
-// @Param	zipstr	formData 	string	true		"str"
+// @Param	zipstr		formData 	string	true		"str"
 // @router / [post]
 func (this *ImageController) Post() {
 	beego.Info("接收到请求:", time.Now().String())
